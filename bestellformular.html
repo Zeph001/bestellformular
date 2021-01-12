@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Wein-Online-Geschäft</title>
+    <script defer src="bestellformular.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form id="my_form">
+    <table id="my_table" style="width:50%">
+        <tr>
+            <th>Flaschen</th>
+            <th>Weinname</th>
+            <th>Einzelpreis</th>
+            <th>Preis</th>
+        </tr>
+
+        <tr>
+            <td><input type="radio" name="versand" id="versandDHL"> </td>
+            <td>Versand DHL (bis 12 Flaschen)</td>
+            <td id="preisDHL">10</td>
+            <td><output id="oversandDHL" >0</output></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="versand" id="versandSpedition"> </td>
+            <td>Versand Spedition</td>
+            <td id="preisSped">15</td>
+            <td><output type="number" id="oversandSpedition" >0</output></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right">
+                <span>Zwischensumme</span>
+            </td>
+            <td>
+                <p><output id="oZwischensumme" for="omsr1 oRC1 oSSR1 oDARS1">0</output> €</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right">
+                MwSt
+            </td>
+            <td>
+                <p><output id="oMwst">0</output> €</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right; font-weight: bold">
+                Summe
+            </td>
+            <td>
+                <p><output id="oSumme">0</output> €</p>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+
+<button type="button" onclick="myButton()">Submit</button>
+
+
+</body>
+</html>
